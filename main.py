@@ -2,7 +2,7 @@ import math
 
 GetNdoc = int(input("Ndoc: "))
 
-def calculate(ndoc): # isso so existe pelo return
+def calculate(ndoc): # isso só existe pelo return
     sequence = []
     formula = 0
 
