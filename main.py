@@ -1,9 +1,14 @@
 import math
-# import matplotlib.pyplot as plt
 
-for j in range(3150): 
-    sequence = [len(j)]
+GetNdoc = int(input("Ndoc: "))
 
-for i in range(len(sequence)):
-    sequence[i] = i + 1 - i + 2
-    print("Objeto atual: ", sequence[i])
+def calculate(ndoc): # isso so existe pelo return
+    sequence = []
+    formula = 0
+
+    for i in range(ndoc):
+        sequence += [i] # formula = i + 1 - i + 2
+        for k in range(len(sequence)):
+            print("Objeto atual: ", sequence[k])
+
+calculate(GetNdoc)
