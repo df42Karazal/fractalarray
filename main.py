@@ -1,14 +1,18 @@
 import math
+from functools import lru_cache
+# import turtle
 
-GetNdoc = int(input("Ndoc: "))
+GetNdoc = int(input("Numero do concurso: "))
+# GetData = [int(input("Dia: ")), int(input("Mês: ")), int(input("Ano: "))]
+# tur = turtle.Turtle()
 
-def calculate(ndoc): # isso só existe pelo return
-    sequence = []
-    formula = 0
+""" for k in range(len(GetData)):
+    GetData[k] = GetData[k] + 1  """
+@lru_cache(100)
+def fib(N):
+    if N <= 1:
+        return 1
+    return fib(N - 1) + fib(N - 2)
 
-    for i in range(ndoc):
-        sequence += [i] # formula = i + 1 - i + 2
-        for k in range(len(sequence)):
-            print("Objeto atual: ", sequence[k])
-
-calculate(GetNdoc)
+sequence = [fib(i) for i in range(GetNdoc)]
+print("Objetos: ", sequence)
